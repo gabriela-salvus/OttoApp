@@ -6,7 +6,7 @@ const { height } = Dimensions.get('window');
 export default function ModoManualScreen() {
   return (
      <View style={styles.container}>
-        <Image source={require('../assets/Modo Manual.png')} style={styles.image} resizeMode="contain" />
+        <Image source={require('../assets/images/Modo Manual.png')} style={styles.image} resizeMode="contain" />
       </View>
   );
 }

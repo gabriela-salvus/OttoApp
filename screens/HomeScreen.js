@@ -8,7 +8,7 @@ export default function HomeScreen({ navigation }) {
     <ScrollView contentContainerStyle={styles.scrollContainer}>
       <View style={styles.container}>
         <Text style={styles.title}>Otto App</Text>
-        <Image source={require('../assets/otto.webp')} style={styles.image} />
+        <Image source={require('../assets/images/otto.webp')} style={styles.image} />
         <View style={styles.buttonContainer}>
           <TouchableOpacity style={styles.button1} onPress={() => navigation.navigate('Componentes')}>
             <Text style={styles.buttonText}>Componentes</Text>

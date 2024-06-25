@@ -6,25 +6,25 @@ export default function ComponentesScreen() {
     <ScrollView contentContainerStyle={styles.container}>
       <Text style={styles.title}>Componentes eletrônicos</Text>
       <View style={styles.componentContainer}>
-        <Image source={require('../assets/servomotor.jpeg')} style={styles.image} />
+        <Image source={require('../assets/images/servomotor.jpeg')} style={styles.image} />
         <Text style={styles.description}>
           <Text style={styles.boldText}>Servo motor:</Text> É um atuador que permite controle preciso de posição, velocidade e aceleração. Ele é composto por um motor, um sensor de posição e um circuito de controle.
         </Text>
       </View>
       <View style={styles.componentContainer}>
-        <Image source={require('../assets/modulo.jpeg')} style={styles.image} />
+        <Image source={require('../assets/images/modulo.jpeg')} style={styles.image} />
         <Text style={styles.description}>
           <Text style={styles.boldText}>Modulo Hc05:</Text> Dispositivo que permite comunicação sem fio entre dispositivos eletrônicos via Bluetooth.
         </Text>
       </View>
       <View style={styles.componentContainer}>
-        <Image source={require('../assets/sensor.jpeg')} style={styles.image} />
+        <Image source={require('../assets/images/sensor.jpeg')} style={styles.image} />
         <Text style={styles.description}>
           <Text style={styles.boldText}>Sensor ultrassônico:</Text> Dispositivo que utiliza ondas sonoras de alta frequência para medir distâncias ou detectar objetos.
         </Text>
       </View>
       <View style={styles.componentContainer}>
-        <Image source={require('../assets/arduino.jpeg')} style={styles.image} />
+        <Image source={require('../assets/images/arduino.jpeg')} style={styles.image} />
         <Text style={styles.description}>
           <Text style={styles.boldText}>Arduino nano:</Text> É uma pequena e completa placa microcontroladora, que serve como o cérebro do robo, ela que irá ser responsavel pelas suas acões.
         </Text>

@@ -9,7 +9,7 @@ export default function ModoDesviaObstaculosScreen() {
       <View style={styles.container}>
         <Text style={styles.title}>Modo Desvia de Obstáculos</Text>
         <Text style={styles.description}>Como funciona a lógica: </Text>
-        <Image source={require('../assets/CodigoDesviaObst.png')} style={styles.image} resizeMode="contain" />
+        <Image source={require('../assets/images/CodigoDesviaObst.png')} style={styles.image} resizeMode="contain" />
       </View>
     </ScrollView>
   );
