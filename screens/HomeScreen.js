@@ -10,19 +10,19 @@ export default function HomeScreen({ navigation }) {
         <Text style={styles.title}>Otto App</Text>
         <Image source={require('../assets/otto_image.jpeg')} style={styles.image} />
         <View style={styles.buttonContainer}>
-          <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Componentes')}>
+          <TouchableOpacity style={styles.button1} onPress={() => navigation.navigate('Componentes')}>
             <Text style={styles.buttonText}>Componentes</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Códigos')}>
+          <TouchableOpacity style={styles.button2} onPress={() => navigation.navigate('Códigos')}>
             <Text style={styles.buttonText}>Códigos</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Como Construir')}>
+          <TouchableOpacity style={styles.button3} onPress={() => navigation.navigate('Como Construir')}>
             <Text style={styles.buttonText}>Como Construir</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Sobre')}>
+          <TouchableOpacity style={styles.button4} onPress={() => navigation.navigate('Sobre')}>
             <Text style={styles.buttonText}>Sobre</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.button} onPress={() => Alert.alert('Conectar')}>
+          <TouchableOpacity style={styles.button5} onPress={() => Alert.alert('Conectar')}>
             <Text style={styles.buttonText}>Conectar</Text>
           </TouchableOpacity>
         </View>
@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
     flexGrow: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#e5f5e5',
+    backgroundColor: '#000',
   },
   container: {
     flex: 1,
@@ -48,10 +48,10 @@ const styles = StyleSheet.create({
     paddingTop: 0,
   },
   title: {
-    fontSize: 32,
-    fontWeight: 'bold',
-    color: '#fff',
-    backgroundColor: '#4CAF50',
+    fontSize: 55,
+    //fontWeight: 'bold',
+    color: '#FFF',
+    //backgroundColor: '#4CAF50',
     width: '100%',
     textAlign: 'center',
     paddingVertical: 10,
@@ -66,20 +66,82 @@ const styles = StyleSheet.create({
     height: width * 0.5,
     marginBottom: 20,
     marginTop: height * 0.1,
+    borderRadius: 50,
   },
   buttonContainer: {
     width: '100%',
     alignItems: 'center',
     marginBottom: 20,
   },
-  button: {
-    backgroundColor: '#4CAF50',
+  button1: {
+    backgroundColor: '#1E90FF',
     paddingVertical: 15,
     paddingHorizontal: 30,
-    borderRadius: 5,
+    borderRadius: 50,
     marginVertical: 10,
     width: '80%',
     alignItems: 'center',
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.3,
+    shadowRadius: 5,
+    elevation: 5,
+  },
+  button2: {
+    backgroundColor: '#FF0000',
+    paddingVertical: 15,
+    paddingHorizontal: 30,
+    borderRadius: 50,
+    marginVertical: 10,
+    width: '80%',
+    alignItems: 'center',
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.3,
+    shadowRadius: 50,
+    elevation: 5,
+  },
+  button3: {
+    backgroundColor: '#FF8C00',
+    paddingVertical: 15,
+    paddingHorizontal: 30,
+    borderRadius: 50,
+    marginVertical: 10,
+    width: '80%',
+    alignItems: 'center',
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.3,
+    shadowRadius: 5,
+    elevation: 5,
+  },
+  button4: {
+    backgroundColor: '#008000',
+    paddingVertical: 15,
+    paddingHorizontal: 30,
+    borderRadius: 50,
+    marginVertical: 10,
+    width: '80%',
+    alignItems: 'center',
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.3,
+    shadowRadius: 5,
+    elevation: 5,
+  },
+  button5: {
+    backgroundColor: '#FFD700',
+    paddingVertical: 15,
+    paddingHorizontal: 30,
+    borderRadius: 50,
+    marginVertical: 10,
+    width: '80%',
+    alignItems: 'center',
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.3,
+    shadowRadius: 5,
+    elevation: 5,
   },
   buttonText: {
     color: '#fff',
@@ -90,7 +152,7 @@ const styles = StyleSheet.create({
     marginBottom: 30,
   },
   footerText: {
-    color: '#4CAF50',
+    color: '#FFF',
     fontSize: 16,
   },
 });

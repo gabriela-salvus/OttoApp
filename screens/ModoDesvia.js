@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     padding: 20,
-    backgroundColor: '#e5f5e5',
+    backgroundColor: '#FFE4E1',
   },
   title: {
     fontSize: 24,
@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   description: {
-    fontSize: 16,
+    fontSize: 24,
     textAlign: 'center',
     fontFamily: 'Roboto',
   },

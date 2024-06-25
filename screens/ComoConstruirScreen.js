@@ -8,7 +8,7 @@ export default function ComoConstruirScreen() {
       <Text style={styles.materiais}>Materiais necessários:</Text>
       <Text style={styles.expli}>*Esses componentes você pode imprimir na impressora 3D. As dimensões se encontram no site: www.ottodiy.com </Text>
       <View style={styles.componentContainer}>
-        <Image source={require('../assets/Cabeça.png')} style={styles.image} />
+        <Image source={require('../assets/Cabeça (1).png')} style={styles.image} />
         <Image source={require('../assets/Duas Pernas (1).png')} style={styles.image} />
         <Image source={require('../assets/Sensor ultrassônico HC-SR.png')} style={styles.image} />
         <Image source={require('../assets/x4 Servos com hélice modelo.png')} style={styles.image} />
@@ -124,14 +124,14 @@ const styles = StyleSheet.create({
     flexGrow: 1,
     padding: 20,
     alignItems: 'center',
-    backgroundColor: '#e5f5e5',
+    backgroundColor: '#FFE4B5',
   },
   stepContainer: {
     marginBottom: 90,
   },
   title: {
     fontSize: 30,
-    fontWeight: 'bold',
+    //fontWeight: 'bold',
     marginBottom: 20,
     fontFamily: 'Roboto',
   },
@@ -145,12 +145,12 @@ const styles = StyleSheet.create({
   },
   passo: {
     fontSize: 24,
-    fontWeight: 'bold',
+    //fontWeight: 'bold',
     marginBottom: 20,
     alignItems: 'center',
     textAlign: 'center',
     fontFamily: 'Roboto',
-    backgroundColor: '#4CAF50',
+    backgroundColor: '#FF8C00',
     padding: 10,
     paddingHorizontal: 100, // Adiciona mais espaço nas laterais
     borderRadius: 5, // Adiciona bordas arredondadas para uma aparência mais agradável
@@ -160,7 +160,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     marginBottom: 20,
     fontFamily: 'Roboto',
-    color: '#4CAF50',
+    color: '#FF8C00',
   },
   expli: {
     fontSize: 14,
