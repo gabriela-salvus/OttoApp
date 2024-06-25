@@ -141,7 +141,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     marginBottom: 20,
     fontFamily: 'Roboto',
-    color: '#4CAF50',
+    color: '#FF8C00',
   },
   passo: {
     fontSize: 24,
@@ -156,7 +156,7 @@ const styles = StyleSheet.create({
     borderRadius: 5, // Adiciona bordas arredondadas para uma aparência mais agradável
   },
   materiais: {
-    fontSize: 24,
+    fontSize: 30,
     fontWeight: 'bold',
     marginBottom: 20,
     fontFamily: 'Roboto',

@@ -1,39 +1,49 @@
 import React from 'react';
-import { View, Text, StyleSheet, Image } from 'react-native';
+import { View, Text, StyleSheet, Image, ScrollView, Dimensions } from 'react-native';
+
+const { height } = Dimensions.get('window');
 
 export default function ModoDesviaObstaculosScreen() {
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Modo Desvia de Obstáculos</Text>
-      <Text style={styles.description}>Como funciona a lógica: </Text>
-      <Image source={require('../assets/CodigoDesviaObst.png')} style={styles.image} />
-    
-    </View>
+    <ScrollView contentContainerStyle={styles.scrollContainer}>
+      <View style={styles.container}>
+        <Text style={styles.title}>Modo Desvia de Obstáculos</Text>
+        <Text style={styles.description}>Como funciona a lógica: </Text>
+        <Image source={require('../assets/CodigoDesviaObst.png')} style={styles.image} resizeMode="contain" />
+      </View>
+    </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
+  scrollContainer: {
+    flexGrow: 1,
+    justifyContent: 'flex-start',
+    alignItems: 'center',
+    paddingVertical: 20,
+    backgroundColor: '#FFE4E1',
+  },
   container: {
     flex: 1,
-    justifyContent: 'center',
     alignItems: 'center',
-    padding: 20,
-    backgroundColor: '#FFE4E1',
+    paddingHorizontal: 20,
   },
   title: {
     fontSize: 24,
     fontWeight: 'bold',
-    marginBottom: 20,
+    marginBottom: 10,
     fontFamily: 'Roboto',
   },
   image: {
-    width: 300,
-    height: 300,
+    width: '100%',
+    height: undefined,
+    aspectRatio: 1, // Mantém a proporção da imagem
     marginBottom: 20,
   },
   description: {
-    fontSize: 24,
+    fontSize: 16,
     textAlign: 'center',
+    marginBottom: 20,
     fontFamily: 'Roboto',
   },
 });
