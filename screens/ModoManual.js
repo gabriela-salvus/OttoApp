@@ -1,46 +1,31 @@
 import React from 'react';
-import { View, Text, StyleSheet, Image, ScrollView, Dimensions } from 'react-native';
+import { View, StyleSheet, Image, Dimensions } from 'react-native';
 
-const { height } = Dimensions.get('window');
+const { width, height } = Dimensions.get('window');
 
 export default function ModoManualScreen() {
   return (
-     <View style={styles.container}>
-        <Image source={require('../assets/images/Modo Manual.png')} style={styles.image} resizeMode="contain" />
-      </View>
+    <View style={styles.container}>
+      <Image source={require('../assets/images/Modo Manual (2).png')} style={styles.image} resizeMode="cover" />
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
-  //scrollContainer: {
-    //flexGrow: 1,
-    //justifyContent: 'flex-start',
-    //alignItems: 'center',
-    //paddingVertical: 20,
-    //backgroundColor: '#FFE4E1',
-  //},
   container: {
     flex: 1,
+    width: width,
+    height: height,
+    justifyContent: 'center',
     alignItems: 'center',
-    paddingHorizontal: 20,
     backgroundColor: '#FFE4E1',
   },
-  title: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    marginBottom: 10,
-  },
   image: {
-    width: '100%',
-    height: 750,
-    aspectRatio: 1, // Mantém a proporção da imagem
-    marginBottom: 20,
-    marginTop:0,
-    resizeMode: 'contain', // Garante que a imagem seja contida dentro das dimensões
-  },
-  description: {
-    fontSize: 16,
-    textAlign: 'center',
-    marginBottom: 20,
+    width: width,
+    height: height,
+    resizeMode: 'cover', // Garante que a imagem cubra toda a área disponível
   },
 });
+
+
+

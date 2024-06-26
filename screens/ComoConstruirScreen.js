@@ -3,8 +3,9 @@ import { StyleSheet, Text, View, Image, ScrollView } from 'react-native';
 
 export default function ComoConstruirScreen() {
   return (
+    <ScrollView contentContainerStyle={styles.outerContainer}>
+      <Image source={require('../assets/images/Comoconstruiroseuotto.png')} style={styles.imageTitulo} />
     <ScrollView contentContainerStyle={styles.container}>
-      <Text style={styles.title}>Como construir o seu otto</Text>
       <Text style={styles.materiais}>Materiais necessários:</Text>
       <Text style={styles.expli}>*Esses componentes você pode imprimir na impressora 3D. As dimensões se encontram no site: www.ottodiy.com </Text>
       <View style={styles.componentContainer}>
@@ -110,17 +111,32 @@ export default function ComoConstruirScreen() {
         <Text style={styles.expli}>Agora você pode conectar o USB ao computador e passar o código para ele. Você encontra diversos códigos que têm funções diferentes no site: www.ottodiy.com</Text>
         <Text style={styles.expli}>as imagens das intruções foram retiradas do site www.ottodiy.com e pintadas para tornarem-se mais didáticas</Text></View>
 
-
+        
       <View style={styles.componentContainer}></View>
         
       </View>
       
     </ScrollView>
+    <Image source={require('../assets/images/Comoconstruiroseuottobaixo.png')} style={styles.imageBaixo} />
+    </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
+  outerContainer:{
+    flex:0,
+    paddingTop:0,
+    backgroundColor: '#FFE4B5'
+  },
   container: {
+    flexGrow: 1,
+    padding: 20,
+    paddingTop: 0,
+    paddingBottom: 0,
+    alignItems: 'center',
+    backgroundColor: '#FFE4B5',
+  },
+  containerImagem: {
     flexGrow: 1,
     padding: 20,
     alignItems: 'center',
@@ -152,8 +168,8 @@ const styles = StyleSheet.create({
     fontFamily: 'Roboto',
     backgroundColor: '#FF8C00',
     padding: 10,
-    paddingHorizontal: 100, // Adiciona mais espaço nas laterais
-    borderRadius: 5, // Adiciona bordas arredondadas para uma aparência mais agradável
+    paddingHorizontal: 100, 
+    borderRadius: 5, 
   },
   materiais: {
     fontSize: 30,
@@ -177,13 +193,25 @@ const styles = StyleSheet.create({
     fontFamily: 'Roboto',
   },
   componentContainer: {
-    marginBottom: 20,
+    marginBottom: 0,
     alignItems: 'center',
+  },
+  imageTitulo:{
+    width: '100%',
+    height: 250,
+    paddingTop: 0,
+    paddingHorizontal:0,
   },
   image: {
     width: 350,
     height: 350,
     marginBottom: 5,
+  },
+  imageBaixo: {
+    width: '100%',
+    height: 250,
+    paddingTop: 0,
+    paddingHorizontal:0,
   },
   
   description: {
