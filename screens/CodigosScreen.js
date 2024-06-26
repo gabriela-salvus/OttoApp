@@ -1,9 +1,16 @@
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
+import { useNavigation } from '@react-navigation/native';
 
-export default function CodigosScreen({ navigation }) {
+export default function CodigosScreen() {
+  const navigation = useNavigation();
+
   return (
     <View style={styles.container}>
+      <TouchableOpacity style={styles.backButton} onPress={() => navigation.goBack()}>
+        <Ionicons name="arrow-back" size={24} color="black" />
+      </TouchableOpacity>
       <Text style={styles.title}>Códigos</Text>
       <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('ModoManual')}>
         <Text style={styles.buttonText}>Modo Manual</Text>
@@ -23,9 +30,14 @@ const styles = StyleSheet.create({
     backgroundColor: '#FFE4E1',
     padding: 20,
   },
+  backButton: {
+    position: 'absolute',
+    top: 15, 
+    left: 10,
+    zIndex: 1,
+  },
   title: {
     fontSize: 50,
-    //fontWeight: 'bold',
     marginVertical: 20,
   },
   button: {

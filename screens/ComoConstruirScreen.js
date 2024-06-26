@@ -1,9 +1,17 @@
 import React from 'react';
-import { StyleSheet, Text, View, Image, ScrollView } from 'react-native';
+import { StyleSheet, Text, View, Image, ScrollView,TouchableOpacity } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
+import { Ionicons } from '@expo/vector-icons';
 
-export default function ComoConstruirScreen() {
+export default function ComponentesScreen() {
+  const navigation = useNavigation();
+
+
   return (
     <ScrollView contentContainerStyle={styles.outerContainer}>
+      <TouchableOpacity style={styles.backButton} onPress={() => navigation.goBack()}>
+        <Ionicons name="arrow-back" size={24} color="black" />
+      </TouchableOpacity>
       <Image source={require('../assets/images/Comoconstruiroseuotto.png')} style={styles.imageTitulo} />
     <ScrollView contentContainerStyle={styles.container}>
       <Text style={styles.materiais}>Materiais necessários:</Text>
@@ -197,6 +205,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   imageTitulo:{
+    top:-60,
     width: '100%',
     height: 250,
     paddingTop: 0,
@@ -209,11 +218,17 @@ const styles = StyleSheet.create({
   },
   imageBaixo: {
     width: '100%',
+    bottom: -60,
     height: 250,
     paddingTop: 0,
     paddingHorizontal:0,
   },
-  
+  backButton: {
+    position: 'absolute',
+    top: 15, 
+    left: 10,
+    zIndex: 1,
+  },
   description: {
     fontSize: 16,
     textAlign: 'center',
