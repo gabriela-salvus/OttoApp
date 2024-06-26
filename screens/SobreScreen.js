@@ -1,10 +1,18 @@
 import React from 'react';
-import { View, Text, StyleSheet, ScrollView } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, TouchableOpacity, Image } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
+import { Ionicons } from '@expo/vector-icons';
 
-export default function SobreScreen() {
+export default function ComponentesScreen() {
+  const navigation = useNavigation();
+
   return (
+    <ScrollView style={styles.outerContainer}>
+      <Image source={require('../assets/images/sobre robo.png')} style={styles.imageTopo} />
+      <TouchableOpacity style={styles.backButton} onPress={() => navigation.goBack()}>
+        <Ionicons name="arrow-back" size={24} color="black" />
+      </TouchableOpacity>
     <ScrollView contentContainerStyle={styles.container}>
-      <Text style={styles.title}>Sobre o Robo Otto:</Text>
       <Text style={styles.text}>
         {'\t'}O Robô Otto é um projeto de robótica educacional que utiliza componentes eletrônicos, como o Arduino e o módulo Bluetooth HC-05, para criar um robô bípede interativo. Este projeto é amplamente reconhecido por sua simplicidade e eficácia em ensinar conceitos básicos de programação, eletrônica e engenharia mecânica de uma maneira prática e envolvente. Otto pode ser controlado remotamente e é capaz de realizar diversos movimentos, como andar, dançar e evitar obstáculos, o que o torna uma ferramenta versátil para o aprendizado.
       </Text>
@@ -15,15 +23,32 @@ export default function SobreScreen() {
         {'\t'}Em resumo, o Robô Otto serve como uma introdução abrangente ao mundo da robótica e da engenharia, promovendo a aprendizagem através da construção prática e do uso de tecnologias modernas. Ele é ideal para iniciantes e entusiastas da robótica que desejam explorar e aprender de maneira prática e divertida.
       </Text>
     </ScrollView>
+    <Image source={require('../assets/images/sobre robo baixo.png')} style={styles.imageBaixo} />
+    </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
+  outerContainer: {
+    flex: 1,
+    paddingTop: 0,
+    padding: 0,
+    paddingBottom: 0,
+    backgroundColor: '#F0FFF0',
+  },
   container: {
-    flexGrow: 1,
+    flex: 1,
     padding: 20,
+    paddingTop: 0,
+    paddingBottom: 0,
     alignItems: 'center',
     backgroundColor: '#F0FFF0',
+  },
+  backButton: {
+    position: 'absolute',
+    top: 20, 
+    left: 10,
+    zIndex: 1,
   },
   title: {
     fontSize: 34,
@@ -36,5 +61,22 @@ const styles = StyleSheet.create({
     textAlign: 'justify',
     fontFamily: 'Roboto',
     marginBottom: 10,
+  },
+  imageTopo:{
+    top:-75,
+    width: '100%',
+    height: 250,
+    marginBottom:-110,
+    paddingTop: 0,
+    paddingBottom: 0,
+    paddingHorizontal:0,
+  },
+  imageBaixo: {
+    //position: 'absolute',
+    top: -25,
+    width: '100%',
+    height: 250,
+    marginTop: 0,
+    marginBottom: -100,
   },
 });

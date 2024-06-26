@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, Image } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 
@@ -7,32 +7,42 @@ export default function CodigosScreen() {
   const navigation = useNavigation();
 
   return (
-    <View style={styles.container}>
+    <View style={styles.outerContainer}>
       <TouchableOpacity style={styles.backButton} onPress={() => navigation.goBack()}>
         <Ionicons name="arrow-back" size={24} color="black" />
       </TouchableOpacity>
-      <Text style={styles.title}>Códigos</Text>
-      <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('ModoManual')}>
-        <Text style={styles.buttonText}>Modo Manual</Text>
-      </TouchableOpacity>
-      <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('ModoDesvia')}>
-        <Text style={styles.buttonText}>Modo Desvia de Obstáculos</Text>
-      </TouchableOpacity>
+      <Image source={require('../assets/images/codigoscima.png')} style={styles.imageTopo} />
+
+      <View style={styles.container}>
+        <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('ModoManual')}>
+          <Text style={styles.buttonText}>Modo Manual</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('ModoDesvia')}>
+          <Text style={styles.buttonText}>Modo Desvia de Obstáculos</Text>
+        </TouchableOpacity>
+      </View>
+
+      <Image source={require('../assets/images/codigosbaixo.png')} style={styles.imageBaixo} />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
+  outerContainer: {
     flex: 1,
-    justifyContent: 'flex-start',
+    justifyContent: 'space-between',
     alignItems: 'center',
     backgroundColor: '#FFE4E1',
-    padding: 20,
+    padding: 0,
   },
+  container: {
+    flex: 1,
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    },
   backButton: {
     position: 'absolute',
-    top: 15, 
+    top: 15,
     left: 10,
     zIndex: 1,
   },
@@ -57,5 +67,15 @@ const styles = StyleSheet.create({
   buttonText: {
     color: '#fff',
     fontSize: 20,
+  },
+  imageTopo: {
+    width: '100%',
+    height: 250,
+    top:-80,
+  },
+  imageBaixo: {
+    width: '100%',
+    height: 250,
+    bottom:-80,
   },
 });

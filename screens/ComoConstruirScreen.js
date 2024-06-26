@@ -8,11 +8,10 @@ export default function ComponentesScreen() {
 
 
   return (
-    <ScrollView contentContainerStyle={styles.outerContainer}>
-      <TouchableOpacity style={styles.backButton} onPress={() => navigation.goBack()}>
+    <ScrollView contentContainerStyle={styles.outerContainer}> 
+      <Image source={require('../assets/images/Comoconstruiroseuotto.png')} style={styles.imageTitulo} /><TouchableOpacity style={styles.backButton} onPress={() => navigation.goBack()}>
         <Ionicons name="arrow-back" size={24} color="black" />
       </TouchableOpacity>
-      <Image source={require('../assets/images/Comoconstruiroseuotto.png')} style={styles.imageTitulo} />
     <ScrollView contentContainerStyle={styles.container}>
       <Text style={styles.materiais}>Materiais necessários:</Text>
       <Text style={styles.expli}>*Esses componentes você pode imprimir na impressora 3D. As dimensões se encontram no site: www.ottodiy.com </Text>
@@ -134,6 +133,7 @@ const styles = StyleSheet.create({
   outerContainer:{
     flex:0,
     paddingTop:0,
+    marginTop: 0,
     backgroundColor: '#FFE4B5'
   },
   container: {
@@ -183,7 +183,7 @@ const styles = StyleSheet.create({
     fontSize: 30,
     fontWeight: 'bold',
     marginBottom: 20,
-    fontFamily: 'Roboto',
+    marginTop:-0,
     color: '#FF8C00',
   },
   expli: {
@@ -209,6 +209,7 @@ const styles = StyleSheet.create({
     width: '100%',
     height: 250,
     paddingTop: 0,
+    paddingBottom: 0,
     paddingHorizontal:0,
   },
   image: {
