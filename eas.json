@@ -16,10 +16,6 @@
     "preview4": {
       "distribution": "internal"
     },
-    "production": {
-      "android": {
-        "buildType": "app-bundle"
-      }
-    }
+    "production": {}
   }
 }

@@ -27,7 +27,7 @@ export default function HomeScreen({ navigation }) {
           </TouchableOpacity>
         </View>
         <View style={styles.footer}>
-          <Text style={styles.footerText}>Criado por Gabriela Teixeira, Luana Moura e Kevin Valentim.</Text>
+          <Text style={styles.footerText}>Criado por Gabriela Teixeira, Kevin Valentim e Luana Moura.</Text>
         </View>
       </View>
     </ScrollView>
