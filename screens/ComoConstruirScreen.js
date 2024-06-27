@@ -9,7 +9,7 @@ export default function ComponentesScreen() {
 
   return (
     <ScrollView contentContainerStyle={styles.outerContainer}> 
-      <Image source={require('../assets/images/Comoconstruiroseuotto.png')} style={styles.imageTitulo} /><TouchableOpacity style={styles.backButton} onPress={() => navigation.goBack()}>
+      <Image source={require('../assets/images/como otto (1).png')} style={styles.imageTitulo} /><TouchableOpacity style={styles.backButton} onPress={() => navigation.goBack()}>
         <Ionicons name="arrow-back" size={24} color="black" />
       </TouchableOpacity>
     <ScrollView contentContainerStyle={styles.container}>
@@ -134,11 +134,12 @@ const styles = StyleSheet.create({
     flex:0,
     paddingTop:0,
     marginTop: 0,
+    marginHorizontal: 0,
     backgroundColor: '#FFE4B5'
   },
   container: {
     flexGrow: 1,
-    padding: 20,
+    padding: 25,
     paddingTop: 0,
     paddingBottom: 0,
     alignItems: 'center',
@@ -152,6 +153,7 @@ const styles = StyleSheet.create({
   },
   stepContainer: {
     marginBottom: 90,
+    alignItems: 'center',
   },
   title: {
     fontSize: 30,
@@ -168,7 +170,7 @@ const styles = StyleSheet.create({
     color: '#FF8C00',
   },
   passo: {
-    fontSize: 24,
+    fontSize: 26,
     //fontWeight: 'bold',
     marginBottom: 20,
     alignItems: 'center',
@@ -176,7 +178,7 @@ const styles = StyleSheet.create({
     fontFamily: 'Roboto',
     backgroundColor: '#FF8C00',
     padding: 10,
-    paddingHorizontal: 100, 
+    paddingHorizontal: 280, 
     borderRadius: 5, 
   },
   materiais: {
@@ -187,7 +189,7 @@ const styles = StyleSheet.create({
     color: '#FF8C00',
   },
   expli: {
-    fontSize: 14,
+    fontSize: 18,
     fontWeight: 'bold',
     marginBottom: 20,
     fontFamily: 'Roboto',
@@ -195,7 +197,7 @@ const styles = StyleSheet.create({
   atencao: {
     textAlign: 'center',
     color: '#ff0000',
-    fontSize: 14,
+    fontSize: 18,
     fontWeight: 'bold',
     marginBottom: 20,
     fontFamily: 'Roboto',
@@ -206,21 +208,23 @@ const styles = StyleSheet.create({
   },
   imageTitulo:{
     top:-60,
-    width: '100%',
-    height: 250,
+    right:31,
+    width: '112%',
+    height: 288,
     paddingTop: 0,
     paddingBottom: 0,
     paddingHorizontal:0,
   },
   image: {
-    width: 350,
-    height: 350,
+    width: 370,
+    height: 370,
     marginBottom: 5,
   },
   imageBaixo: {
-    width: '100%',
     bottom: -60,
-    height: 250,
+    right:27,
+    width: '107%',
+    height: 280,
     paddingTop: 0,
     paddingHorizontal:0,
   },
@@ -231,7 +235,7 @@ const styles = StyleSheet.create({
     zIndex: 1,
   },
   description: {
-    fontSize: 16,
+    fontSize: 18,
     textAlign: 'center',
     fontFamily: 'Roboto',
   },

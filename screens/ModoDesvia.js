@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, StyleSheet, Image, Dimensions, TouchableOpacity } from 'react-native';
+import { View, StyleSheet, Image, Dimensions, TouchableOpacity, ScrollView } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { Ionicons } from '@expo/vector-icons';
 
@@ -9,12 +9,14 @@ export default function ComponentesScreen() {
   const navigation = useNavigation();
 
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
       <TouchableOpacity style={styles.backButton} onPress={() => navigation.goBack()}>
         <Ionicons name="arrow-back" size={24} color="black" />
       </TouchableOpacity>
-      <Image source={require('../assets/images/Modo Desvia.png')} style={styles.image} resizeMode="cover" />
-    </View>
+      <View style={styles.imageContainer}>
+      <Image source={require('../assets/images/Modo Desvia.png')} style={styles.image}  />
+      </View>
+    </ScrollView>
   );
 }
 
@@ -23,14 +25,21 @@ const styles = StyleSheet.create({
     flex: 1,
     width: width,
     height: height,
-    justifyContent: 'center',
-    alignItems: 'center',
+    padding:0,
     backgroundColor: '#FFE4E1',
   },
-  image: {
+  imageContainer: {
     width: width,
-    height: height,
-    resizeMode: 'cover', // Garante que a imagem cubra toda a área disponível
+    alignItems: 'center',
+    marginBottom:-60,
+   
+  },
+  image: {
+    top:-30,
+    width: width,
+    height: undefined,
+    aspectRatio: 0.48, 
+  
   },
   backButton: {
     position: 'absolute',

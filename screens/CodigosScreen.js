@@ -69,13 +69,16 @@ const styles = StyleSheet.create({
     fontSize: 20,
   },
   imageTopo: {
-    width: '100%',
-    height: 250,
-    top:-80,
+    top:-85,
+    right:5,
+    width: '120%',
+    height: 280,
+    
   },
   imageBaixo: {
-    width: '100%',
-    height: 250,
-    bottom:-80,
+    bottom: -85,
+    right:5,
+    width: '120%',
+    height: 280,
   },
 });

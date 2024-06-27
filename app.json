@@ -4,7 +4,11 @@
     "slug": "ottoapp",
     "version": "1.0.0",
     "orientation": "portrait",
-    "platforms": ["ios", "android", "web"],
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
     "ios": {
       "supportsTablet": true,
       "infoPlist": {
@@ -12,10 +16,21 @@
       }
     },
     "android": {
-      "permissions": ["BLUETOOTH", "BLUETOOTH_ADMIN", "ACCESS_FINE_LOCATION"]
+      "permissions": [
+        "BLUETOOTH",
+        "BLUETOOTH_ADMIN",
+        "ACCESS_FINE_LOCATION"
+      ],
+      "package": "com.gabiteixeira_09.ottoapp"
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "b670f66c-b088-4cca-8b4a-cd716b2e4ffe"
+      }
+    },
+    "owner": "gabiteixeira_09"
   }
 }
